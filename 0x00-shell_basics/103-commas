@@ -1,2 +1,2 @@
 #!/bin/bash
-IFS=,; echo "$(ls -pd ./* | sort -d --version-sort | tr '\n' ',')"; unset IFS
+ls -p | grep -E '^(\.\/|\.\.\/)?$' -v | sort -d --version-sort | tr '\n' ',' | sed 's/,$/\n/'
