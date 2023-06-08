@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1 | grep -E "([a-zA-Z0-9])" | sort -k1,1 | grep -v "^\.$|^\.\.$" | sed -e "s/\(.*\)/\1\//g"
+IFS=,; echo "$(ls -pd ./* | sort -d --version-sort | tr '\n' ',')"; unset IFS
