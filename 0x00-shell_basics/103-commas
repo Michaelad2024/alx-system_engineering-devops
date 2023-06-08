@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -p | sort -d --version-sort | tr '\n' ','; echo
+ls -p | sort -d --version-sort | tr '\n' ',' | echo "$(cat -)"
